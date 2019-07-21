@@ -18,12 +18,25 @@ public class Main {
 
         AddBean add = (AddBean) context.getBean("addBean");
 
-        add.add();
-
-        add.setFirst(14);
+        //  add.add();
+        //  add.setFirst(14);
 
         AddBean sum = (AddBean) context.getBean("addBean");
 
-        sum.add();
+        //  sum.add();
+
+
+        SingletonBean singletonBean = (SingletonBean) context.getBean("singletonBean");
+
+        singletonBean.setFirst("hello");
+        singletonBean.setNumber(32.4);
+
+        System.out.println(singletonBean.action());
+        System.out.println(singletonBean.action2());
+
+        SingletonBean singletonBean1 = (SingletonBean) context.getBean("singletonBean");
+
+        System.out.println(singletonBean1.action2());
+        System.out.println(singletonBean1.action());
     }
 }
