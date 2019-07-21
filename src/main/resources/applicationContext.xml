@@ -39,4 +39,12 @@
     <bean class="spring.Computer" id="computer">
         <constructor-arg index="0" ref="processor"/>
     </bean>
+
+    <bean class="spring.Car" id="car">
+        <constructor-arg index="0" ref="engine"/>
+    </bean>
+
+    <bean class="spring.Engine" id="engine">
+        <constructor-arg index="0" value="75KM"/>
+    </bean>
 </beans> 

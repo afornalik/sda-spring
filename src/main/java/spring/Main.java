@@ -50,8 +50,11 @@ public class Main {
 
         Computer computer = (Computer) context.getBean("computer");
 
-        System.out.println(computer.getProcessor().getCPU());
+//        System.out.println(computer.getProcessor().getCPU());
 
 
+        Car car = (Car) context.getBean("car");
+
+        System.out.println(car.getEngine().getPower());
     }
 }
