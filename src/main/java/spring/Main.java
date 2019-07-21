@@ -29,17 +29,23 @@ public class Main {
 
         SingletonBean singletonBean = (SingletonBean) context.getBean("singletonBean");
 
-        singletonBean.setFirst("hello");
-        singletonBean.setNumber(32.4);
-
-        System.out.println(singletonBean.action());
-        System.out.println(singletonBean.action2());
+//        singletonBean.setFirst("hello");
+//        singletonBean.setNumber(32.4);
+//
+//        System.out.println(singletonBean.action());
+//        System.out.println(singletonBean.action2());
 
         SingletonBean singletonBean1 = (SingletonBean) context.getBean("singletonBean");
+//
+//        System.out.println(singletonBean1.action2());
+//        System.out.println(singletonBean1.action());
 
-        System.out.println(singletonBean1.action2());
-        System.out.println(singletonBean1.action());
+//        context.close();
 
-        context.close();
+        BeanTemplate beanTemplate = (BeanTemplate) context.getBean("beanTemplate");
+
+        System.out.println(beanTemplate.getValue1());
+        System.out.println(beanTemplate.getValue2());
+        System.out.println(beanTemplate.getValue3());
     }
 }

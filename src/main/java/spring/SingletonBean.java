@@ -25,13 +25,17 @@ public class SingletonBean {
 
     public Double action() {
         if (number== null){
-            System.out.println( Math.random());
+          //  System.out.println( Math.random());
         }
        return number;
     }
 
     public String action2(){
         return first;
+    }
+
+    public void initial() {
+
     }
 
     public void destroy() {

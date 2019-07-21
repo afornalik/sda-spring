@@ -18,4 +18,14 @@
     <bean class="spring.SingletonBean" id="singletonBean" init-method="action" destroy-method="destroy">
 
     </bean>
+
+    <bean  id="template" abstract="true">
+        <property name="value1" value="one" />
+        <property name="value2" value="two" />
+        <property name="value3" value="three" />
+    </bean>
+
+    <bean id="beanTemplate" class="spring.BeanTemplate" parent="template">
+        <property name="value2" value="twelve" />
+    </bean>
 </beans> 
