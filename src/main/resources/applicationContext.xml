@@ -28,4 +28,15 @@
     <bean id="beanTemplate" class="spring.BeanTemplate" parent="template">
         <property name="value2" value="twelve" />
     </bean>
+
+
+
+
+    <bean class="spring.Processor" id="processor">
+        <property name="CPU" value="2500"/>
+    </bean>
+
+    <bean class="spring.Computer" id="computer">
+        <constructor-arg index="0" ref="processor"/>
+    </bean>
 </beans> 

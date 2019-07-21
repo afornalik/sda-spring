@@ -9,13 +9,13 @@ public class Main {
         ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
         HelloWorld helloWorld = (HelloWorld) context.getBean("helloWorld");
 
-       // helloWorld.getMessage();
-       // helloWorld.setMessage2("new value");
+        // helloWorld.getMessage();
+        // helloWorld.setMessage2("new value");
 
-        HelloWorld h2 =(HelloWorld)context.getBean("helloWorld");
+        HelloWorld h2 = (HelloWorld) context.getBean("helloWorld");
 
-       // h2.getMessage();
-       // h2.getMessage2();
+        // h2.getMessage();
+        // h2.getMessage2();
 
         AddBean add = (AddBean) context.getBean("addBean");
 
@@ -44,8 +44,14 @@ public class Main {
 
         BeanTemplate beanTemplate = (BeanTemplate) context.getBean("beanTemplate");
 
-        System.out.println(beanTemplate.getValue1());
-        System.out.println(beanTemplate.getValue2());
-        System.out.println(beanTemplate.getValue3());
+//        System.out.println(beanTemplate.getValue1());
+//        System.out.println(beanTemplate.getValue2());
+//        System.out.println(beanTemplate.getValue3());
+
+        Computer computer = (Computer) context.getBean("computer");
+
+        System.out.println(computer.getProcessor().getCPU());
+
+
     }
 }
