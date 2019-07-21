@@ -7,6 +7,22 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class ConfigurationClass {
 
+
+    @Bean
+    public CustomEventPublisher customEventPublisher() {
+        return new CustomEventPublisher();
+    }
+
+    @Bean
+    public CustomEventHandler customEventHandler() {
+        return new CustomEventHandler();
+    }
+
+    @Bean
+    public CStartEventHandler cStartEventHandler() {
+        return new CStartEventHandler();
+    }
+
     @Bean
     public PersonBean personBean() {
         return new PersonBean();
