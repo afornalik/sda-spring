@@ -1,5 +1,7 @@
 package spring;
 
+import java.util.Random;
+
 public class SingletonBean {
 
     private String first;
@@ -22,10 +24,19 @@ public class SingletonBean {
     }
 
     public Double action() {
+        if (number== null){
+            System.out.println( Math.random());
+        }
        return number;
     }
 
     public String action2(){
         return first;
     }
+
+    public void destroy() {
+        System.out.println("Destroy method");
+    }
+
+
 }

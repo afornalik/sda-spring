@@ -1,11 +1,12 @@
 package spring;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Main {
     public static void main(String[] args) {
-        ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+        ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
         HelloWorld helloWorld = (HelloWorld) context.getBean("helloWorld");
 
        // helloWorld.getMessage();
@@ -38,5 +39,7 @@ public class Main {
 
         System.out.println(singletonBean1.action2());
         System.out.println(singletonBean1.action());
+
+        context.close();
     }
 }

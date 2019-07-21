@@ -15,7 +15,7 @@
         <property name="second" value="9" />
     </bean>
 
-    <bean class="spring.SingletonBean" id="singletonBean" init-method="action">
+    <bean class="spring.SingletonBean" id="singletonBean" init-method="action" destroy-method="destroy">
 
     </bean>
 </beans> 
