@@ -5,31 +5,29 @@
        default-init-method="init"
        default-destroy-method="destroy">
 
-    <bean scope="prototype" class="spring.HelloWorld" id="helloWorld" >
-            <property name="message" value="first value"/>
-            <property name="message2" value="second value"/>
+    <bean scope="prototype" class="spring.HelloWorld" id="helloWorld">
+        <property name="message" value="first value"/>
+        <property name="message2" value="second value"/>
     </bean>
 
-    <bean  class="spring.AddBean" id="addBean">
-        <property name="first" value="1" />
-        <property name="second" value="9" />
+    <bean class="spring.AddBean" id="addBean">
+        <property name="first" value="1"/>
+        <property name="second" value="9"/>
     </bean>
 
     <bean class="spring.SingletonBean" id="singletonBean" init-method="action" destroy-method="destroy">
 
     </bean>
 
-    <bean  id="template" abstract="true">
-        <property name="value1" value="one" />
-        <property name="value2" value="two" />
-        <property name="value3" value="three" />
+    <bean id="template" abstract="true">
+        <property name="value1" value="one"/>
+        <property name="value2" value="two"/>
+        <property name="value3" value="three"/>
     </bean>
 
     <bean id="beanTemplate" class="spring.BeanTemplate" parent="template">
-        <property name="value2" value="twelve" />
+        <property name="value2" value="twelve"/>
     </bean>
-
-
 
 
     <bean class="spring.Processor" id="processor">
@@ -46,5 +44,36 @@
 
     <bean class="spring.Engine" id="engine">
         <constructor-arg index="0" value="75KM"/>
+    </bean>
+
+    <bean class="spring.SpringCollection" id="collection">
+        <property name="listNames">
+            <list>
+                <value>Pawel</value>
+                <value>Kamila</value>
+                <value>Hania</value>
+                <value>Andrzej</value>
+            </list>
+
+        </property>
+        <property name="setNames">
+            <set>
+                <value>Pawel</value>
+                <value>Kamila</value>
+                <value>Hania</value>
+                <value>Andrzej</value>
+            </set>
+
+        </property>
+        <property name="mapNames">
+            <map>
+                <entry key="1" value="Pawel"/>
+                <entry key="2" value="Kamila"/>
+                <entry key="3" value="Hania"/>
+                <entry key="4" value="Andrzej"/>
+            </map>
+
+        </property>
+
     </bean>
 </beans> 

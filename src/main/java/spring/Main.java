@@ -4,6 +4,8 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import java.util.Map;
+
 public class Main {
     public static void main(String[] args) {
         ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
@@ -53,8 +55,19 @@ public class Main {
 //        System.out.println(computer.getProcessor().getCPU());
 
 
-        Car car = (Car) context.getBean("car");
+//        Car car = (Car) context.getBean("car");
+//
+//        System.out.println(car.getEngine().getPower());
 
-        System.out.println(car.getEngine().getPower());
+        SpringCollection springCollection = (SpringCollection) context.getBean("collection");
+
+        springCollection.getListNames().forEach(System.out::println);
+        System.out.println();
+
+        springCollection.getSetNames().forEach(System.out::println);
+        System.out.println();
+
+        springCollection.getMapNames().forEach((k,v) -> System.out.println(k +" " + v));
+        System.out.println();
     }
 }
