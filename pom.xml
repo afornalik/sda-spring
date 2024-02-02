@@ -22,7 +22,7 @@
 
 
     <properties>
-        <org.springframework.version>5.0.5.RELEASE</org.springframework.version>
+        <org.springframework.version>5.2.22.RELEASE</org.springframework.version>
     </properties>
 
     <dependencies>
@@ -37,7 +37,7 @@
     <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-context</artifactId>
-        <version>5.0.5.RELEASE</version>
+        <version>5.2.22.RELEASE</version>
     </dependency>
 
     <dependency>
